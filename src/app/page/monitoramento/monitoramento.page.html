@@ -1,0 +1,158 @@
+<ion-content>
+
+  <ion-header class="ion-no-border">
+    <ion-item lines="none">
+      <ion-buttons slot="start">
+        <ion-menu-button menu="main-menu" color="light"></ion-menu-button>
+      </ion-buttons>
+      </ion-item>
+  </ion-header>
+
+  <div class="cabecalho">
+
+  </div>
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col size="6">
+        <ion-label>
+          <ion-note class="ion-margin-start">Saldo em Conta</ion-note>
+          <p>
+            <ion-chip color="light">
+              <ion-label>R$ 10.000,00</ion-label>
+            </ion-chip>
+          </p>
+        </ion-label>
+      </ion-col>
+
+      <ion-col size="6" class="ion-text-end">
+        <ion-button color="secondary" fill="outline">
+          <ion-text color="light">Lançamento</ion-text>
+          <ion-icon name="add-outline" slot="end" color="light"></ion-icon>
+        </ion-button>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="ion-margin-horizontal ion-margin-top">
+      <ion-col>
+        <ion-label color="light">
+          <b>Atalhos</b>
+        </ion-label>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6" routerLink="">
+        <ion-card class="ion-text-center">
+          <ion-card-header>
+            <div>
+              <ion-button fill="clear">
+                <ion-icon name="trending-up-outline" style="font-size: 30px;"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            Receitas
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-text-center">
+          <ion-card-header>
+            <div>
+              <ion-button fill="clear">
+                <ion-icon name="trending-down-outline" style="font-size: 30px;"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            Despesas
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-text-center">
+          <ion-card-header>
+            <div>
+              <ion-button fill="clear">
+                <ion-icon name="swap-horizontal-outline" style="font-size: 30px;"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            Emprestimos
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6">
+        <ion-card class="ion-text-center">
+          <ion-card-header>
+            <div>
+              <ion-button fill="clear">
+                <ion-icon name="swap-vertical-outline" style="font-size: 30px;"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-card-header>
+          <ion-card-content>
+            Transferência
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <div style="margin-top: 20px; font-size: 16px; font-weight: bold;">
+      <ion-text>Transações</ion-text>
+    </div>
+
+    <ion-row style="margin-top: 20px;">
+      <ion-card>
+        <ion-card-content>
+          <ion-list lines="none">
+            <ion-item>
+              <ion-avatar slot="start" style="font-size: 30px;">
+                <ion-icon name="logo-apple"></ion-icon>
+              </ion-avatar>
+              <ion-label text-wrap style="font-weight: bold;">
+                Apple Brasil
+                <p style="font-size: 12px;">Macbook Pro 16GB 512 SDD i9</p>
+                <p style="font-size: 12px;">20/03/2022</p>
+              </ion-label>
+              <ion-text slot="end" style="font-size: 14px;">
+                <ion-icon name="arrow-down-outline" color="danger"></ion-icon>
+                R$ 15.000,00
+              </ion-text>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    <ion-row>
+      <ion-card>
+        <ion-card-content>
+          <ion-list lines="none">
+            <ion-item>
+              <ion-avatar slot="start" style="font-size: 30px;">
+                <ion-icon name="logo-mastodon"></ion-icon>
+              </ion-avatar>
+              <ion-label style="font-weight: bold;">
+                Mirante Tecnologia da Informação
+                <p style="font-size: 12px;">Salário Mensal</p>
+                <p style="font-size: 12px;">10/03/2022</p>
+              </ion-label>
+              <ion-text slot="end" style="font-size: 14px;">
+                <ion-icon name="arrow-up-outline" color="success"></ion-icon>
+                R$ 6.000,00
+              </ion-text>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

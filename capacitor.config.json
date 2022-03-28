@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "astatinumapp",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

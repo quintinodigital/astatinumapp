@@ -1,0 +1,58 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Gerenciador de Pessoas</ion-title>
+    <ion-buttons slot="end" (click)="redirecionarTelaCadastrarPessoa()">
+      <ion-button>
+        <ion-icon name="person-add-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list lines="none">
+
+    <ion-list-header>
+      <ion-label>Pessoas Cadastradas</ion-label>
+    </ion-list-header>
+
+    <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="chevron-down-circle-outline"
+        pullingText="Carregar Dados"
+        refreshingSpinner="circles"
+        refreshingText="Recuperando...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+    <ion-searchbar [(ngModel)]="termoPesquisa" placeholder="Pesquisar..." showCancelButton="focus" animated></ion-searchbar>
+
+    <ion-item-sliding *ngFor="let item of pessoaList | filter:termoPesquisa">
+      <ion-item>
+          <ion-avatar slot="start">
+            <img [src]="item.arquivo != null ? recuperarImagem(item.arquivo.imagem) : '../../assets/icon/favicon.png'" />
+          </ion-avatar>
+          <ion-label>
+            {{item.nome}}
+            <p>Administrador Financeiro</p>
+          </ion-label>
+          <ion-button slot="end" color="primary" fill="clear">
+            <ion-icon name="swap-horizontal-outline"></ion-icon>
+          </ion-button>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option (click)="redirecionarTelaDetalharPessoa(item)">
+          <ion-label>Detalhar</ion-label>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,85 @@
+<ion-content class="ion-text-center">
+
+  <div class="header">
+    <h2>{{pessoaEntity.nome}}</h2>
+    <p>Administrador Financeiro</p>
+  </div>
+
+  <div class="centralizar">
+    <div class="bordaA">
+      <div class="bordaB">
+        <div class="avatar">
+        <img [src]="pessoaEntity.arquivo != null ? recuperarImagem(pessoaEntity.arquivo.imagem) : '../../../../assets/padrao_i.gif'" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Notificações</ion-label>
+    </ion-list-header>
+    <ion-card>
+      <ion-item>
+        <ion-label text-wrap>
+          Alertas de Pagamentos
+          <p>Envia uma notificação toda vez que ocorrer um Pagamento</p>
+        </ion-label>
+        <ion-toggle slot="end" color="primary"></ion-toggle>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+  <ion-list lines="none">
+    <ion-list-header>
+      <ion-label>Segurança</ion-label>
+    </ion-list-header>
+    <ion-card>
+      <ion-item>
+        <ion-label text-wrap>
+          Mudar Nome de Usuário
+        </ion-label>
+        <ion-button fill="clear">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>
+          Mudar Senha de Acesso
+        </ion-label>
+        <ion-button fill="clear">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>
+          Mudar E-mail
+        </ion-label>
+        <ion-button fill="clear">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>
+          Tornar Perfil Privado
+        </ion-label>
+        <ion-toggle slot="end" color="primary"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>
+          Habilitar Verificação de Dois Fatores
+        </ion-label>
+        <ion-toggle slot="end" color="primary"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label text-wrap>
+          Deslogar de todas as Plataformas
+        </ion-label>
+        <ion-button fill="clear">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-card>
+  </ion-list>
+
+</ion-content>
